@@ -2,8 +2,16 @@
   <div id="app">
     <!-- script에서 설정한 컴포넌트 태그 추가 -->
     <TodoHeader></TodoHeader>
-    <TodoInput></TodoInput>
-    <TodoList></TodoList>
+    <!--
+      할 일 추가 버튼을 클릭했을 때, App 컴포넌트로 이벤트를 전달할 수 있게
+      v-on 디렉티브 추가
+    -->
+    <TodoInput v-on:addTodo="addTodo"></TodoInput>
+    <!--
+      뷰 데이터에서 선언한 todoItems 속성을
+      todoList 컴포넌트에 pops로 전달
+    -->
+    <TodoList v-bind:propsdata="todoItems"></TodoList>
     <TodoFooter></TodoFooter>
   </div>
 </template>
@@ -20,6 +28,18 @@
   import TodoFooter from './components/TodoFooter.vue'
 
   export default {
+    props: ['propsdata'],
+    data() {
+      return {
+        // 데이터 속성 todoItems 선언
+        todoItems: []
+      }
+    },
+    methods: {
+      addTodo() {
+        // 로컬 스토리지에 데이터를 추가하는 로직
+      }
+    },
     // 지역 컴포넌트 등록
     components: {
       // template 에서 태그로 사용할 이름 : import 에서 설정한 객체
