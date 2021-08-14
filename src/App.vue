@@ -11,7 +11,7 @@
       뷰 데이터에서 선언한 todoItems 속성을
       todoList 컴포넌트에 pops로 전달
     -->
-    <TodoList v-bind:propsdata="todoItems"></TodoList>
+    <TodoList v-bind:propsdata="todoItems" @removeTodo="removeTodo"></TodoList>
     <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
   </div>
 </template>
@@ -62,6 +62,15 @@
       clearAll() {
         localStorage.clear();
         this.todoItems = [];
+      },
+      removeTodo(todoItem, index) {
+        // 로컬 스토리지의 데이터를 삭제
+        localStorage.removeItem(todoItem);
+        /*
+            splice() : 배열의 특정 인덱스를 삭제하는 API
+            할 일 삭제 처리
+        */
+        this.todoItems.splice(index, 1);
       }
     },
     // 지역 컴포넌트 등록
