@@ -10,7 +10,7 @@
     export default {
         methods: {
             // 로컬 스토리지의 데이터를 모두 삭제
-            cleatTodo() {
+            clearTodo() {
                 localStorage.clear();
             }
         }
