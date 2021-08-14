@@ -32,6 +32,11 @@
                     this.todoItems.push(localStorage.key(i));
                 }
             }
+        },
+        methods: {
+            removeTodo() {
+                console.log('clicked');
+            }
         }
     }
 </script>
