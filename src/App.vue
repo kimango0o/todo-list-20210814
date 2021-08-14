@@ -32,5 +32,24 @@
 </script>
 
 <style>
+  /* 애플리케이션 전체의 배경 색 및 텍스트 정렬 방식 정의 */
+  body {
+    text-align: center;
+    background-color: #F6F6F8;
+  }
 
+  /* Input 박스의 테두리 모양 정의 */
+  input {
+    border-style: groove;
+    width: 200px;
+  }
+
+  button {
+    border-style: groove;
+  }
+
+  /* 그림자 정의 */
+  .shadow {
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+  }
 </style>
