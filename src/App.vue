@@ -36,8 +36,15 @@
       }
     },
     methods: {
-      addTodo() {
-        // 로컬 스토리지에 데이터를 추가하는 로직
+      addTodo(todoItem) {
+        /*
+          로컬 스토리지에 데이터를 추가하는 로직
+           - todoItem : TodoInput 컴포넌트에서 올려 보낸 할 일 텍스트 값
+           - 이 값을 로컬 스토리지에 저장하고, App 컴포넌트의 todoItems 데이터 속성에도 추가
+           ( 뷰 데이터 )
+        */
+        localStorage.setItem(todoItem, todoItem);
+        this.todoItems.push(todoItem);
       }
     },
     // 지역 컴포넌트 등록

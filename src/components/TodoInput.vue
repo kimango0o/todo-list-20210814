@@ -43,8 +43,12 @@
                         [ Application → Local Storage → http://localhost:8080 ]
                         - Storage.setItem(key: string, value: string)
                          : 왼 쪽에 key, 오른쪽에 value 저장
+                        localStorage.setItem(value, value);
                     */
-                    localStorage.setItem(value, value);
+                   /*
+                        이벤트를 전달할 때 할 일 텍스트 값인 value 객체를 인자 값으로 전달
+                   */
+                    this.$emit('addTodo', value);
                     // Input 박스의 입력 값을 초기화
                     this.clearInput();
                 }
