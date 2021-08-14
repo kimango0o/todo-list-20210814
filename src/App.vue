@@ -12,7 +12,7 @@
       todoList 컴포넌트에 pops로 전달
     -->
     <TodoList v-bind:propsdata="todoItems"></TodoList>
-    <TodoFooter></TodoFooter>
+    <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
   </div>
 </template>
 
@@ -58,6 +58,10 @@
         */
         localStorage.setItem(todoItem, todoItem);
         this.todoItems.push(todoItem);
+      },
+      clearAll() {
+        localStorage.clear();
+        this.todoItems = [];
       }
     },
     // 지역 컴포넌트 등록
