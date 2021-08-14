@@ -1,9 +1,7 @@
 <template>
     <section>
         <ul>
-            <li>할 일 1</li>
-            <li>할 일 2</li>
-            <li>할 일 3</li>
+            <li v-for="todoItem in todoItems" v-bind:key="todoItem">{{ todoItem }}</li>
         </ul>
     </section>
 </template>
