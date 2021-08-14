@@ -1,7 +1,7 @@
 <template>
     <section>
         <transition-group name="list" tag="ul">
-            <li v-for="(todoItem, index) in propsdata" v-bind:key="todoItem" class="shadow">
+            <li v-for="(todoItem, index) in propsdata" :key="todoItem" class="shadow">
                 <i class="checkBtn fas fa-check" aria-hidden="true"></i>
                 {{ todoItem }}
                 <span class="removeBtn" type="button" @click="removeTodo(todoItem, index)">
@@ -24,6 +24,16 @@
 </script>
 
 <style scoped>
+    /* 뷰 애니메이션 속성 */
+    .list-enter-active, .list-leave-active {
+        transition: all ls;
+    }
+
+    .list-enter, .list-leave-to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    
     ul {
         list-style-type: none;
         padding-left: 0px;
@@ -51,15 +61,5 @@
     .removeBtn {
         margin-left: auto;
         color: #de4343;
-    }
-
-    /* 뷰 애니메이션 속성 */
-    .list-enter-active, .list-leave-active {
-        transition: all ls;
-    }
-
-    .list-enter, .list-leave-to {
-        opacity: 0;
-        transform: translateY(30px);
     }
 </style>

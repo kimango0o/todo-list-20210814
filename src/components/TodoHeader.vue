@@ -7,7 +7,7 @@
     <!-- [ 애플리케이션 제목 추가하기 ] -->
     <header>
         <h1>
-            <a href="void:javascript(0);">ㅎ ㅐ ㅇ ㅑ ㅎ ㅏ ㄹ ㅇ ㅣ ㄹ</a>
+            <a href="javascript:void(0);">ㅎ ㅐ ㅇ ㅑ ㅎ ㅏ ㄹ ㅇ ㅣ ㄹ</a>
         </h1>
     </header>
 </template>
