@@ -85,10 +85,21 @@
 </script>
 
 <style>
+  @font-face {
+    font-family: 'JSDongkang-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-BoldA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  div, input {
+    font-family: 'JSDongkang-Bold';
+  }
+
   /* 애플리케이션 전체의 배경 색 및 텍스트 정렬 방식 정의 */
   body {
     text-align: center;
-    background-color: #f9fabea9;
+    background-color: #F9F8ED;
   }
 
   /* Input 박스의 테두리 모양 정의 */
