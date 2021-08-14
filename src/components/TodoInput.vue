@@ -14,7 +14,12 @@
         },
         methods: {
             addTodo() {
-                console.log(this.newTodoItem);
+                /*
+                    [ Application → Local Storage → http://localhost:8080 ]
+                     - Storage.setItem(key: string, value: string)
+                     : 왼 쪽에 key, 오른쪽에 value 저장
+                */
+                localStorage.setItem(this.newTodoItem, this.newTodoItem);
             }
         }
     }
